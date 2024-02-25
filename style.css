@@ -19,14 +19,14 @@
     border-radius: 10px;
 }
 .todo-app h2{
-    color: #002765;
+    color: #FFBE98;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 .todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
+    width: 50px;
+    margin-left: 20px;
 }
 .row{
     display: flex;
@@ -49,9 +49,10 @@ button{
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
-    color: #ffff;
+    background: #F7DED0;
+    color: #c79c8d;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 40px;
 }

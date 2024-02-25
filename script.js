@@ -30,6 +30,7 @@ listContainer.addEventListener("click", function(e){
     }
 }, false);
 
+    // Doesnt work without console log lmao??
 // listContainer.addEventListener("click", function(e){
 //     if(e.target.tagName === "LI"){
 //         e.target.classList.toggle("checked");
@@ -40,11 +41,13 @@ listContainer.addEventListener("click", function(e){
 //     }
 // }, false);
 
-function saveData(){
-    localStorage.setItem("data", listContainer.innerHtml);
-}
-function showTask(){
-    listContainer.innerHTML = localStorage.getitem("data");
 
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
 }
+
+function showTask() {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
 showTask();

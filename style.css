@@ -4,10 +4,13 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
+body {
+    background: linear-gradient(135deg, #ebc1f5, #f5e5c1);
+}
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ebc1f5, #f5e5c1);
+    /* background: linear-gradient(135deg, #ebc1f5, #f5e5c1); */
     padding: 10px;
 }
 .todo-app{
@@ -100,4 +103,91 @@ ul li span {
 }
 ul li span:hover {
     background: #edeef0;
+}
+
+:root{
+    --size: 260px;
+}
+.kast {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+}
+
+.kast .notes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.kast .notes .note {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    background-color: #F7DED0;
+    font-family: "Caveat", cursive;
+}
+.kast .notes .note::before {
+    content: 'double click to remove';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85em;
+    transition: 0.5s;
+}
+#create{
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    background: #F7DED0;
+    display: flex;
+    justify-content: center;
+    font-size: 6em;
+    cursor: pointer;
+
+}
+#create i{
+    position: absolute;
+    color: #ffff;
+    padding: 70px;
+}
+
+.createbox {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    z-index: 1000;
+    display: none;
+}
+.createbox textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    padding: 20px;
+    outline: none;
+    font-size: 0.2em;
+    font-family: "Caveat", cursive;
+    resize: none;
+    border: pink;
+    border-style: dotted;
+}
+.details h3 {
+    font-family: "Caveat", cursive;
+    user-select: none;
+    font-size: 1.45em;
+    padding: 10px;
 }
